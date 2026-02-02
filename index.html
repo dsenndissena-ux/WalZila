@@ -199,9 +199,8 @@
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             background: #000;
-            cursor: pointer;
             overflow: hidden;
         }
 
@@ -212,97 +211,6 @@
             width: 100%;
             height: 100%;
             border: none;
-            display: none;
-        }
-
-        .video-container.playing iframe {
-            display: block;
-        }
-
-        .video-container.playing .video-thumbnail {
-            display: none;
-        }
-
-        .video-thumbnail {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, rgba(255, 45, 85, 0.3), rgba(0, 217, 255, 0.3));
-            transition: opacity 0.3s ease;
-        }
-
-        .video-thumbnail::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: 
-                repeating-linear-gradient(
-                    45deg,
-                    transparent,
-                    transparent 10px,
-                    rgba(255, 255, 255, 0.02) 10px,
-                    rgba(255, 255, 255, 0.02) 20px
-                );
-            animation: pattern 20s linear infinite;
-        }
-
-        @keyframes pattern {
-            from { transform: translateX(0); }
-            to { transform: translateX(28.28px); }
-        }
-
-        .play-button {
-            width: 80px;
-            height: 80px;
-            background: var(--primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            z-index: 3;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(255, 45, 85, 0.4);
-        }
-
-        .video-card:hover .play-button {
-            transform: scale(1.15);
-            background: var(--accent);
-            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.5);
-        }
-
-        .play-button::after {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 20px solid white;
-            border-top: 12px solid transparent;
-            border-bottom: 12px solid transparent;
-            margin-left: 5px;
-        }
-
-        .video-overlay {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 0.4rem 0.8rem;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            z-index: 3;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .video-card:hover .video-overlay {
-            opacity: 1;
         }
 
         .video-info {
@@ -434,12 +342,8 @@
     <main class="video-grid">
         <!-- Video Card 1 -->
         <article class="video-card">
-            <div class="video-container" onclick="playVideoInline(this)">
-                <div class="video-thumbnail">
-                    <div class="play-button"></div>
-                    <div class="video-overlay">Click to Watch</div>
-                </div>
-                <iframe src="" data-src="https://myvidplay.com/e/fqcnmivn8erc" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
+            <div class="video-container">
+                <iframe src="https://myvidplay.com/e/fqcnmivn8erc" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
             </div>
             <div class="video-info">
                 <div class="video-number">Video 01</div>
@@ -456,12 +360,8 @@
 
         <!-- Video Card 2 -->
         <article class="video-card">
-            <div class="video-container" onclick="playVideoInline(this)">
-                <div class="video-thumbnail">
-                    <div class="play-button"></div>
-                    <div class="video-overlay">Click to Watch</div>
-                </div>
-                <iframe src="" data-src="https://myvidplay.com/e/fgxq9x6hrsj3" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
+            <div class="video-container">
+                <iframe src="https://myvidplay.com/e/fgxq9x6hrsj3" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
             </div>
             <div class="video-info">
                 <div class="video-number">Video 02</div>
@@ -478,12 +378,8 @@
 
         <!-- Video Card 3 -->
         <article class="video-card">
-            <div class="video-container" onclick="playVideoInline(this)">
-                <div class="video-thumbnail">
-                    <div class="play-button"></div>
-                    <div class="video-overlay">Click to Watch</div>
-                </div>
-                <iframe src="" data-src="https://myvidplay.com/e/drf7p8lzxznr" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
+            <div class="video-container">
+                <iframe src="https://myvidplay.com/e/drf7p8lzxznr" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
             </div>
             <div class="video-info">
                 <div class="video-number">Video 03</div>
@@ -500,12 +396,8 @@
 
         <!-- Video Card 4 -->
         <article class="video-card">
-            <div class="video-container" onclick="playVideoInline(this)">
-                <div class="video-thumbnail">
-                    <div class="play-button"></div>
-                    <div class="video-overlay">Click to Watch</div>
-                </div>
-                <iframe src="" data-src="https://myvidplay.com/e/aetemx21g8q2" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
+            <div class="video-container">
+                <iframe src="https://myvidplay.com/e/aetemx21g8q2" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
             </div>
             <div class="video-info">
                 <div class="video-number">Video 04</div>
@@ -522,12 +414,8 @@
 
         <!-- Video Card 5 -->
         <article class="video-card">
-            <div class="video-container" onclick="playVideoInline(this)">
-                <div class="video-thumbnail">
-                    <div class="play-button"></div>
-                    <div class="video-overlay">Click to Watch</div>
-                </div>
-                <iframe src="" data-src="https://myvidplay.com/e/drf7p8lzxznr" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
+            <div class="video-container">
+                <iframe src="https://myvidplay.com/e/drf7p8lzxznr" scrolling="no" allowfullscreen="true" allow="autoplay"></iframe>
             </div>
             <div class="video-info">
                 <div class="video-number">Video 05</div>
@@ -581,17 +469,6 @@
                 sunIcon.classList.add('active');
             }
         });
-
-        function playVideoInline(container) {
-            const iframe = container.querySelector('iframe');
-            const videoSrc = iframe.getAttribute('data-src');
-            
-            // Load the video
-            iframe.src = videoSrc;
-            
-            // Add playing class to show iframe and hide thumbnail
-            container.classList.add('playing');
-        }
 
         function toggleSpoiler(button) {
             const spoilerContent = button.nextElementSibling;
